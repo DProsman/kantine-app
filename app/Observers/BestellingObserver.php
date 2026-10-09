@@ -17,7 +17,7 @@ class BestellingObserver
             $korting = (int) round($bestelling->subtotaal * Kassa::PERSONEELSKORTING);
 
             $bestelling->korting = $korting;
-            $bestelling->totaal = $bestelling->totaal - $korting;
+            $bestelling->totaal = $bestelling->subtotaal - $korting;
         }
     }
 }
