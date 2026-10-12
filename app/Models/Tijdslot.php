@@ -45,7 +45,7 @@ class Tijdslot extends Model
         $vanUtc = $vandaag->copy()->setTimeFromTimeString($van)->utc();
         $totUtc = $vandaag->copy()->setTimeFromTimeString($tot)->utc();
 
-        return $query->where('start', '>', $vanUtc)
+        return $query->where('start', '>=', $vanUtc)
             ->where('start', '<', $totUtc);
     }
 
