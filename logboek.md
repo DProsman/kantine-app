@@ -13,8 +13,8 @@
 **Oplossing:** Ik heb deze zin: return $query->where('start', '>', $vanUtc) verandert naar: return $query->where('start', '>=', $vanUtc)
 
 ## Ticket #103
-**Reproductie:** welke stappen, wat zag ik, wat verwachtte ik?
-**Hypothese:** waar denk ik dat het misgaat en waarom?
-**Onderzoek:** welke bestanden/commits heb ik bekeken, wat sloot ik uit?
-**Oorzaak:** wat bleek het echt te zijn?
-**Oplossing:** wat heb ik veranderd en waarom zo?
+**Reproductie:** Nieuw broodje toegevoegd, verdween inderdaad.
+**Hypothese:** iets in de controller
+**Onderzoek:** Controller, model
+**Oorzaak:** De fillable in de model
+**Oplossing:** Deze zin: protected $fillable = ['naam', 'prijs', 'beschikbaar']; naar dit: protected $fillable = ['naam', 'prijs', 'categorie', 'beschikbaar']; verandert

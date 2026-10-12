@@ -9,7 +9,7 @@ class Product extends Model
 {
     protected $table = 'producten';
 
-    protected $fillable = ['naam', 'prijs', 'beschikbaar'];
+    protected $fillable = ['naam', 'prijs', 'categorie', 'beschikbaar'];
 
     protected function casts(): array
     {
